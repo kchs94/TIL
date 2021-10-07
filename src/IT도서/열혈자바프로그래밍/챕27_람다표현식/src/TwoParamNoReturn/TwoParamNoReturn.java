@@ -1,20 +1,23 @@
 package IT도서.열혈자바프로그래밍.챕27_람다표현식.src.TwoParamNoReturn;
 
 interface Calculate {
-    void cal(int a, int b);    // 매개변수 둘, 반환형 void
+    void calculate(int a, int b);   // 매개변수가 2개이고 반환형이 없는 람다식
 }
 
 public class TwoParamNoReturn {
     public static void main(String[] args) {
-        Calculate c;
+        Calculate calculate;
 
-        c = (a, b) -> System.out.println(a+b);
-        c.cal(4, 3);    // 이번엔 덧셈이 진행
-
-        c = (a, b) -> System.out.println(a-b);
-        c.cal(4, 3);
-
-        c = (a, b) -> System.out.println(a*b);
-        c.cal(4, 3);
+        calculate = (a, b) -> System.out.println(a + b);
+        calculate.calculate(4, 3);  // 덧셈 진행
+        
+        calculate = (a, b) -> System.out.println(a - b);
+        calculate.calculate(4,3);   // 뺄셈 진행
+        
+        calculate = (a, b) -> System.out.println(a * b);
+        calculate.calculate(4,3);   // 곱셈 진행
+        
+        calculate = (a, b) -> System.out.println(a / b);
+        calculate.calculate(4, 3);  // 나눗셈 진행
     }
 }
