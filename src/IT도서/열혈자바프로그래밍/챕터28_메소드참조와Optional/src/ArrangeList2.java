@@ -8,11 +8,11 @@ import java.util.function.Consumer;
 
 public class ArrangeList2 {
     public static void main(String[] args) {
-        List<Integer> ls = Arrays.asList(1, 3, 5, 7, 9);
-        ls = new ArrayList<>(ls);
+        List<Integer> list = Arrays.asList(1, 3, 5, 7, 9);
+        list = new ArrayList<>(list);
 
-        Consumer<List<Integer>> c = Collections::reverse;   // 메소드 참조
-        c.accept(ls);   // 전달 인자 ls를 reverse에 그래도 전달하게 된다.
-        System.out.println(ls);
+        Consumer<List<Integer>> consumer = Collections::reverse;    // 메소드 참조
+        consumer.accept(list);
+        System.out.println(list);
     }
 }
