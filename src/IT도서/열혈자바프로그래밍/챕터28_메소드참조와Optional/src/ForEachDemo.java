@@ -10,4 +10,3 @@ public class ForEachDemo {
         ls.forEach(System.out::println);    // 메소드 참조 기반.
     }
 }
-a
