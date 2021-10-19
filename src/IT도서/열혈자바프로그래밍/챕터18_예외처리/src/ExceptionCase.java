@@ -1,6 +1,5 @@
 package IT도서.열혈자바프로그래밍.챕터18_예외처리.src;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class ExceptionCase {
@@ -8,13 +7,14 @@ public class ExceptionCase {
         Scanner in = new Scanner(System.in);
 
         try {
-            int a = in.nextInt();
-            int b = in.nextInt();
-            System.out.println(a/b);
+            int n1 = in.nextInt();
+            int n2 = in.nextInt();
+
+            System.out.println(n1 / n2);
         }
-        catch (ArithmeticException e) {
-            System.out.print(e.getMessage());
+        catch(ArithmeticException e) {
+            System.out.println(e.getMessage());
         }
-        System.out.println("hello");
+        System.out.println("예외 처리 후 밑에 문장도 실행된다!!");
     }
 }
